@@ -25,7 +25,7 @@ SECRET_KEY = 'pt&s1gezrr^!0@=1)d*9un!%nwgq#aggzp3-fdbgfaf)5!=)-*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'thedownerdisco.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'mardeas.pythonanywhere.com']
 
 
 # Application definition
@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'forum', 
+    'forum',
 ]
 
 MIDDLEWARE = [
