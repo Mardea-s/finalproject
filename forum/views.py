@@ -9,3 +9,9 @@ def index(request):
 
 def about(request):
     return render(request, 'forum/about.html', {})
+
+def post(request):
+    return render(request, 'forum/post.html', {})
+
+def contact(request):
+    return render(request, 'forum/contact.html', {})
