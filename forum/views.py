@@ -15,3 +15,6 @@ def post(request):
 
 def contact(request):
     return render(request, 'forum/contact.html', {})
+
+def hotlines(request):
+    return render(request, 'forum/hotlines.html', {})
