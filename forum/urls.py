@@ -7,4 +7,5 @@ urlpatterns = [
     url(r'^post$', views.post, name='post'),
     url(r'^contact$', views.contact, name='contact'),
     url(r'^hotlines$', views.hotlines, name='hotlines'),
+    url(r'^references$', views.references, name='references'),
 ]

@@ -18,3 +18,6 @@ def contact(request):
 
 def hotlines(request):
     return render(request, 'forum/hotlines.html', {})
+
+def references(request):
+    return render(request, 'forum/references.html', {})
