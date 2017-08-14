@@ -43,6 +43,7 @@
                     <span class="sr-only">Toggle navigation</span>
                     Menu <i class="fa fa-bars"></i>
                 </button>
+
                 <!-- Start of user authentication (important) -->
                 {% if user.is_authenticated %}
                     <a class="navbar-brand" href="{% url 'logout' %}">Logout</a>
@@ -67,6 +68,12 @@
                     </li>
                     <li>
                         <a href="contact">Contact</a>
+                    </li>
+                    <li>
+                        <a href="hotlines">Hotlines</a>
+                    </li>
+                    <li>
+                        <a href="references">References</a>
                     </li>
                 </ul>
             </div>

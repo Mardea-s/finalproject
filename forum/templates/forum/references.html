@@ -10,15 +10,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Django Girls blog</title>
+    <title>Title</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
 
     <!-- Theme CSS -->
     <link rel="stylesheet" href="{% static 'css/clean-blog.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/forum.css' %}">
-
 
     <!-- Custom Fonts -->
     <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
@@ -72,6 +70,9 @@
                         <a href="contact">Contact</a>
                     </li>
                     <li>
+                        <a href="hotlines">Hotlines</a>
+                    </li>
+                    <li>
                         <a href="references">References</a>
                     </li>
                 </ul>
@@ -83,14 +84,14 @@
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url({% static '/img/home-bg.jpg' %})">
+    <header class="intro-header" style="background-image: url({% static 'img/about-bg.jpg' %})">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="site-heading">
-                        <h1>Clean Blog</h1>
+                    <div class="page-heading">
+                        <h1>Our Sources</h1>
                         <hr class="small">
-                        <span class="subheading">A Clean Blog Theme by Start Bootstrap</span>
+                        <span class="subheading">The research behind our info</span>
                     </div>
                 </div>
             </div>
@@ -101,32 +102,17 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <!-- <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">
-                            Man must explore, and this is exploration at its greatest
-                        </h2>
-                        <h3 class="post-subtitle">
-                            Problems look mighty small from 150 miles up
-                        </h3>
-                    </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 24, 2014</p>
-                </div>
-                <hr> -->
-                <h1><a href="">Django Girls Blog</a></h1>
-                {% for post in posts %}
-                    <div>
-                        <p>published: {{ post.published_date }}</p>
-                        <h1><a href="">{{ post.title }}</a></h1>
-                        <p>{{ post.text|linebreaksbr }}</p>
-                    </div>
-                {% endfor %}
-                <!-- Pager -->
-                <ul class="pager">
-                    <li class="next">
-                        <a href="#">Older Posts &rarr;</a>
-                    </li>
-                </ul>
+              <p><b>PTSD</b>
+                <br/>
+                  <a href= "https://www.ptsd.va.gov/professional/assessment/overview/comparison-icd-dsm-iv.asp">PTSD.gov</a>
+              </p>
+              <p><b>Schizophrenia</b>
+                <br/>
+                <a href= "https://www.estss.org/learn-about-trauma/dsm-iv-definition/">DSM-IV Definition</a>
+                <br/>
+                <a href= "http://www.mayoclinic.org/diseases-conditions/schizoaffective-disorder/home/ovc-20258872?utm_source=Google&utm_medium=abstract&utm_content=Schizoaffective-disorder&utm_campaign=Knowledge-panel">Mayo Clinic</a>
+              </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum molestiae debitis nobis, quod sapiente qui voluptatum, placeat magni repudiandae accusantium fugit quas labore non rerum possimus, corrupti enim modi! Et.</p>
             </div>
         </div>
     </div>
