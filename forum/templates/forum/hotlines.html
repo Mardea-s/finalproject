@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 {% load staticfiles %}
-<html lang="en">
 
+<html lang="en">
 <head>
 
     <meta charset="utf-8">
@@ -10,10 +10,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Clean Blog - Sample Post</title>
+    <title>Clean Blog - About</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
 
     <!-- Theme CSS -->
     <link rel="stylesheet" href="{% static 'css/clean-blog.min.css' %}">
@@ -87,36 +87,44 @@
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url({% static 'img/post-bg.png' %})">
+    <header class="intro-header" style="background-image: url({% static 'img/about-bg.jpg' %})">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="post-heading">
-                        <h1>Forum</h1>
-                        <h2 class="subheading">The friendliest place on the web to discuss mental health issues. Welcome {{ user.username }}!</h2>
+                    <div class="page-heading">
+                        <h1>Hotlines</h1>
+                        <hr class="small">
+                        <span class="subheading">Asking for Help</span>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Post Content -->
-    <article>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                {% for post in posts %}
-                    <div>
-                        <p>published: {{ post.published_date }}</p>
-                        <h1><a href="">{{ post.title }}</a></h1>
-                        <p>{{ post.text|linebreaksbr }}</p>
-                    </div>
-                    <hr>
-                {% endfor %}
-                </div>
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>Suicide Prevention Lifeline: 1-800-273-TALK</p>
+                <p>Crisis Text Line: Text “home” to 741741</p>
+                <p>Runaway Hotline: 800-621-4000</p>
+                <p>Gay and Lesbian National Hotline: 1-888-THE-GLNH (1-888-843-4564)</p>
+                <p>National Alliance on Mental Illness (NAMI): 1-800-950-NAMI (6264)</p>
+                <p>Help Finding a Therapist: 1-800-THERAPIST (1-800-843-7274)</p>
+                <p>Teen Helpline: 1-800-400-0900</p>
+                <p>Depression and Bipolar Support Alliance: 800-826-3632</p>
+                <p>Panic Disorder Information Hotline: 800- 64-PANIC</p>
+                <p>Eating Disorders Center: 1-888-236-1188</p>
+                <p>Gay and Lesbian Trevor HelpLine Suicide Prevention: 1-800-850-8078</p>
+
+
+
+
+
+
             </div>
         </div>
-    </article>
+    </div>
 
     <hr>
 
