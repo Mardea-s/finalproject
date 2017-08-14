@@ -13,6 +13,9 @@ def index(request):
 def about(request):
     return render(request, 'forum/about.html', {})
 
+def feeling_down(request):
+    return render(request, 'forum/feeling_down.html', {})
+
 @login_required(login_url='/accounts/login/')
 def post(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')

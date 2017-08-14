@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Clean Blog - About</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="{% static 'css/clean-blog.min.css' %}">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+
+                <!-- Start of user authentication (important) -->
+                {% if user.is_authenticated %}
+                    <a class="navbar-brand" href="{% url 'logout' %}">Logout</a>
+                {% else %}
+                    <a class="navbar-brand" href="{% url 'signup' %}">Sign Up</a>
+                    <a class="navbar-brand" href="{% url 'login' %}?next={{ request.path }}">Login</a>
+                {% endif %}
+                <!-- End of user authentication -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="forum">Forum</a>
+                    </li>
+                    <li>
+                        <a href="about">The More You Know</a>
+                    </li>
+                    <li>
+                        <a href="feeling_down">Feeling Down?</a>
+                    </li>
+                    <li>
+                        <a href="hotlines">Hotlines</a>
+                    </li>
+                    <li>
+                        <a href="contact">Contact</a>
+                    </li>
+                    <li>
+                        <a href="references">References</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url({% static 'img/about-bg.jpg' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="page-heading">
+                        <h1>Feeling Down?</h1>
+                        <hr class="small">
+                        <span class="subheading">Are you feeling down, stressed, or just straight up bored? Well here is your utopia to feel better!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1>Cheering Up</h1>
+                <li><a href="http://emergencycompliment.com/">Emergency Compliment</a></li>
+                <li><a href="http://1000awesomethings.com/?cnn=yes">1000 Awesome Things</a></li>
+                <li><a href="http://make-everything-ok.com/">Make Everything Okay</a></li>
+                <br>
+                <h1>Calming Down</h1>
+                <li><a href="https://www.calm.com/">Guided meditation </a></li>
+                <li><a href="http://www.kerismith.com/popular-posts/100-ideas/ ">100 things to do</a></li>
+                <li><a href="http://www.rainymood.com/">The sound of rain</a></li>
+                <li><a href="https://www.drweil.com/health-wellness/body-mind-spirit/stress-anxiety/breathing-three-exercises/ ">Breathing Exercise</a></li>
+                <li><a href="http://www.donothingfor2minutes.com/">Do nothing for 2 minutes</a></li>
+                <li><a href="http://soundrown.com/ ">Soundrown</a></li>
+                <br>
+                <h1>Distractions and Cool Stuff</h1>
+                <li><a href="http://www.drawastickman.com/episode1">Draw a Stickman</a></li>
+                <li><a href="http://spielzeugz.de/html5/liquid-particles/">Fun Liquid Particles</a></li>
+                <br>
+                <h1>Psychological Games</h1>
+                <li><a href="http://www.kongregate.com/games/stustuthebloo/no-one-has-to-die ">No one has to Die</a></li>
+                <li><a href="http://www.kongregate.com/games/alexanderocias/loved">Loved</a></li>
+                <li><a href="http://www.comagame.net/coma-game.html">Coma</a></li>
+                <br>
+                <h1>Grouding Techniques</h1>
+                <p>Grounding is a technique that helps keep someone in the present. They help reorient a person to the here-and-now and in reality. Grounding skills can be helpful in a variety of situations: with dissociation symptoms; and managing overwhelming feelings or intense anxiety. They help someone to regain their mental focus from an often intensely emotional state.</p>
+                <p>Grounding skills occur within two specific approaches: Sensory Awareness and Cognitive Awareness</p>
+                <h3>1. Sensory Awareness</h3>
+                <h3>Grounding Exercise #1:</h3>
+                <p>Begin by tracing your hand on a piece of paper and label each finger as one of the five senses. Then take each finger and identify something special and safe representing each of those five senses. For example: Thumb represents sight and a label for sight might be butterflies or my middle finger represents the smell sense and it could be represented by lilacs.
+                <p>After writing and drawing all this on paper, post it on your refrigerator or other safe places in the home where it could be easily seen and memorize it.</p>
+                <p>Whenever you get triggered, breathe deeply and slowly, and put your hand in front of your face where you can really see it – stare at your hand and then look at each finger and try to do the five senses exercise from memory. </p>
+                <h3>Grounding Exercise #2:</h3>
+                <p>☞ Keep your eyes open, look around the room, notice your surroundings, notice
+details.</p>
+                <p>☞ Hold a pillow, stuffed animal or a ball.</p>
+                <p>☞ Place a cool cloth on your face, or hold something cool such as a can of soda.</p>
+                <p>☞ Listen to soothing music.</p>
+                <p>☞ Put your feet firmly on the ground.</p>
+                <p>☞ FOCUS on someone’s voice or a neutral conversation.</p>
+                <br>
+                <h3>Grounding Exercise #3</h3>
+                <p>Here's the 54321 "game":</p>
+                <p>♣ Name 5 things you can see in the room with you.</p>
+                <p>♥  Name 4 things you can feel (“chair on my back” or “feet on floor”)</p>
+                <p>♦ Name 3 things you can hear right now (“fingers tapping on keyboard” or “tv”)</p>
+                <p>★ Name 2 things you can smell right now (or, 2 things you like the smell of)</p>
+                <p>✦ Name 1 good thing about yourself</p>
+                <br>
+                <h3>2.Cognitive Awarenses</h3>
+                <h3>Grounding Exercise #1:</h3>
+                <p>Re-orient yourself in place and time by asking yourself some or all of these questions:</p>
+                <p>1. Where am I?</p>
+                <p>2. What is today?</p>
+                <p>3. What is the date?</p>
+                <p>4. What is the month?</p>
+                <p>5. What is the year?</p>
+                <p>6. How old am I?</p>
+                <p>7. What season is it?</p>
+                <br>
+                <h1>Here are some more techniques you may use to help you!</h1>
+                <p> ❥Stomp your feet to remind yourself where you are. Press your feet firmly into the ground.</p>
+                <p> ❥Try to notice where you are, your surroundings, including the people or the sounds around you, like the TV or radio.</p>
+                <p> ❥Concentrate on your breathing. Take a deep, cleansing breath from your diaphragm. Count the breaths as you exhale. Make sure you breath slowly so you don’t hyperventilate.</p>
+                <p> ❥Cross your legs and arms. Feel the sensations of you controlling your body.</p>
+                <p> ❥Call a friend and ask them to talk to you about something you have recently done together.</p>
+                <p> ❥Take a warm, relaxing bubble bath or a warm shower. Feel the water touching your body.</p>
+                <p> ❥Find your pulse on your wrist and count the beats per minute. Concentrate on feeling the blood pulse throughout your body.</p>
+                <p> ❥Go outside and sit against a tree. Feel the bark pressing against your body. Smell the outside aromas like the grass and the leaves. Run your fingers through the grass.</p>
+                <p> ❥If you are sitting, stand. If you are standing, sit. Pay attention to the movement change. Reminding yourself, you are in control.</p>
+                <p> ❥Rub your palms, clap your hands. Listen to the sounds. Feel the sensation.</p>
+                <p> ❥Speak out loud.</p>
+                <p> ❥Hold something that you find comforting. For some it may be a stuffed animal or blanket. Notice how it feels in your hands.</p>
+                <p> ❥Eat something. How does it taste? Sweet or sour? Is it warm or cold?</p>
+                <p> ❥If you have a pet, pat them and feel their fur beneath your hand. Say the pet’s name out loud.</p>
+                <p> ❥Go to a mirror and make yourself smile. Watch your reflection as your expression changes. How does it make you feel?</p>
+                <p> ❥Visualize a bright red STOP sign, to help you stop the flashback and/or memory.</p>
+                <p> ❥Step outside. If it is warm, feel the sun shining down on your face. If it is cold, feel the breeze. How does it make your body feel?</p>
+                <p> ❥During a non-crisis time, make a list of things that are in your house and what room they are in. Give this list to friends that you can call so they can remind you what is around you.</p>
+                <p> ❥During a non-crisis time make a list of positive affirmations. Print them out and keep them handy for when you are having a flashback. Read the list out loud.</p>
+                <p> ❥Take a walk outside and notice what is there. Pay attention to houses and count them.</p>
+                <p> ❥Listen to familiar music and sing along to it. Dance to it.</p>
+                <p> ❥Make a list of known triggers and give it to your counselor  Ask them if they can help you find a way to desensitize those triggers so they aren't quite so powerful.</p>
+                <p> ❥Write in your journal.</p>
+                <p> ❥Imagine yourself in a safe place. Feel the safety and know it.</p>
+                <p> ❥Watch a favorite TV program or video. Play a video game.</p>
+                <p> ❥Meditate, if you are comfortable doing it.</p>
+                <p> ❥Exercise. Ride a bike, lift weights or go for a walk</p>
+
+
+                <h1>Advice For People Who Are Not Having A Good Day</h1>
+                <p></p>
+
+
+                <p>Hey! If you still don't feel better it is not your fault! And it is okay to ask for help.</p>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; Your Website 2016</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="{% static 'js/jqBootstrapValidation.js' %}"></script>
+    <script src="{% static 'js/contact_me.js' %}"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="{% static 'js/clean-blog.min.js' %}"></script>
+
+</body>
+
+</html>
