@@ -11,6 +11,8 @@ urlpatterns = [
     url(r'^contact$', views.contact, name='contact'),
     url(r'^hotlines$', views.hotlines, name='hotlines'),
     url(r'^references$', views.references, name='references'),
+    url(r'^post/new/$', views.post_new, name='post_new'),
+
 ]
 
 urlpatterns += [
