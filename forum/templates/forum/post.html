@@ -104,6 +104,7 @@
     <article>
         <div class="container">
             <div class="row">
+                <a href="{% url 'post_new' %}"  class="btn btn-default">Create Post</a>
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 {% for post in posts %}
                     <div>
@@ -127,7 +128,7 @@
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <ul class="list-inline text-center">
                         <li>
-                          
+
                         </li>
                     </ul>
                     <p class="copyright text-muted">Copyright &copy; Your Website 2016</p>
