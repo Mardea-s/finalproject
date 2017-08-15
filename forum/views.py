@@ -48,11 +48,12 @@ def references(request):
 def post_new(request):
     if request.method == "POST":
         form = PostForm(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author = request.user
+            post.published_date = timezone.now()
+            post.save()
+            return redirect('/forum')
     else:
         form = PostForm()
-    if form.is_valid():
-        post = form.save(commit=False)
-        post.author = request.user
-        post.published_date = timezone.now()
-        post.save()
     return render(request, 'forum/post_edit.html', {'form': form})
